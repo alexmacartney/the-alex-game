@@ -37,7 +37,7 @@ def processInput():
 
     return playerNumber
 
-def update(gameStatus,magicNumber,playerNumber):
+def update(gameStatus, magicNumber, playerNumber):
     """
     Update game state
 
@@ -60,7 +60,7 @@ def update(gameStatus,magicNumber,playerNumber):
 
     return gameStatus, magicNumber
 
-def render(gameStatus,magicNumber):
+def render(gameStatus, magicNumber):
     """
     Render game state
 
@@ -83,8 +83,8 @@ def runGame():
     gameStatus, magicNumber = init()
     while gameStatus != "win" and gameStatus != "end":
         playerNumber = processInput()
-        gameStatus, magicNumber = update(gameStatus,magicNumber,playerNumber)
-        render(gameStatus,magicNumber)
+        gameStatus, magicNumber = update(gameStatus, magicNumber, playerNumber)
+        render(gameStatus, magicNumber)
 
 
 # Launch the game
