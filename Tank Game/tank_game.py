@@ -403,7 +403,7 @@ class Layer(GameStateObserver):
         
         # Draw
         if angle is None:
-            surface.blit(self.texture,spritePoint,textureRect)
+            surface.blit(self.texture, spritePoint, textureRect)
         else:
             # Extract the tile in a surface
             textureTile = pygame.Surface((self.cellWidth, self.cellHeight), pygame.SRCALPHA)
@@ -420,7 +420,7 @@ class Layer(GameStateObserver):
         raise NotImplementedError() 
     
 class ArrayLayer(Layer):
-    def __init__(self, cellSize, imageFile, gameState, array,surfaceFlags = pygame.SRCALPHA):
+    def __init__(self, cellSize, imageFile, gameState, array, surfaceFlags = pygame.SRCALPHA):
         super().__init__(cellSize, imageFile)
         self.gameState = gameState
         self.array = array
