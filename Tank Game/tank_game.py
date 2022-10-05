@@ -17,7 +17,7 @@ class GameItem():
         self.status = "alive"
         self.position = position
         self.tile = tile
-        self.orientation = 0    
+        self.orientation = 0
     
 class Unit(GameItem):
     def __init__(self, state, position, tile):
@@ -388,7 +388,7 @@ class Layer(GameStateObserver):
 
     @property
     def cellHeight(self):
-        return int(self.cellSize.y)        
+        return int(self.cellSize.y)
     
     def unitDestroyed(self, unit):
         pass
@@ -453,7 +453,7 @@ class UnitsLayer(Layer):
             if unit.status == "alive":
                 size = unit.weaponTarget - unit.position
                 angle = math.atan2(-size.x, -size.y) * 180 / math.pi
-                self.renderTile(surface,unit.position, Vector2(0, 6),angle)
+                self.renderTile(surface, unit.position, Vector2(0, 6), angle)
                 
 class BulletsLayer(Layer):
     def __init__(self, cellSize, imageFile, gameState, bullets):
@@ -830,7 +830,7 @@ class UserInterface(GameModeObserver):
         
         # Loop properties
         self.clock = pygame.time.Clock()
-        self.running = True        
+        self.running = True
         
     def gameWon(self):
         self.showMessage("VICTORY")
